@@ -13,7 +13,12 @@ namespace T42_Navegacion
 		{
 			InitializeComponent();
 
-			MainPage = new T42_Navegacion.MainPage();
+            //MainPage = new T42_Navegacion.MainPage();
+            MainPage = new NavigationPage(new T42_Navegacion.MainPage())
+            {
+                BarBackgroundColor = Color.Blue,
+                BarTextColor = Color.WhiteSmoke
+            };
 		}
 
 		protected override void OnStart ()
